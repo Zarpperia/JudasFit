@@ -1413,3 +1413,27 @@ section {
   border-radius: 10px;
   margin-top: 10px;
 }
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#apto {
+  font-size: 100px;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif; 
+  animation: blink 1s infinite;
+}
+
+#apto span {
+  animation: blink 1s infinite;
+  animation-delay: 0.2s;
+}
