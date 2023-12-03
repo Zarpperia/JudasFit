@@ -208,7 +208,7 @@ figure {
 }
 
 .sf-menu a {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.753);
   padding: 0.75em 1em !important;
   font-weight: normal;
   border-left: none;
@@ -216,7 +216,7 @@ figure {
   border-top: none;
   text-decoration: none;
   zoom: 1;
-  font-size: 16px;
+  font-size: 25px;
   border-bottom: none !important;
   font-weight: 300;
 }
@@ -314,7 +314,7 @@ figure {
 
 #fh5co-logo {
   z-index: 2;
-  font-size: 38px;
+  font-size: 60px;
   text-transform: uppercase;
   font-weight: 900;
   float: left;
@@ -609,7 +609,7 @@ figure {
 .fh5co-table,
 .fh5co-table-cell,
 .fh5co-parallax {
-  height: 500px;
+  height: 400px;
 }
 
 .fh5co-parallax {
@@ -1436,4 +1436,104 @@ section {
 #apto span {
   animation: blink 1s infinite;
   animation-delay: 0.2s;
+}
+
+.highlighted-border {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+}
+
+.highlighted-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: 4px solid transparent;
+  border-image: linear-gradient(45deg, #ff0000, #00ff00);
+  border-image-slice: 1;
+  animation: highlightBorder 3s infinite linear;
+}
+
+@keyframes highlightBorder {
+  0% {
+      transform: scaleX(0) scaleY(0);
+      opacity: 0;
+  }
+  50% {
+      transform: scaleX(1.2) scaleY(1.2);
+      opacity: 0.8;
+  }
+  100% {
+      transform: scaleX(1) scaleY(1);
+      opacity: 0;
+  }
+}
+
+#container-autenticacao {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.caixa-formulario {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grupo-formulario {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.grupo-formulario label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.grupo-formulario input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+#botao-login,
+#botao-criar-conta,
+#botao-login-gmail {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+#botao-login:hover,
+#botao-criar-conta:hover,
+#botao-login-gmail:hover {
+  background-color: #45a049;
+}
+
+.escondido {
+  display: none;
 }
