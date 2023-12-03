@@ -89,41 +89,43 @@
 		<br>
 		
 		<div id="container-autenticacao">
-			<div id="caixa-login" class="caixa-formulario">
+			<div class="caixa-formulario" id="caixa-login">
 				<h2>Login</h2>
 				<form>
-					<div class="grupo-formulario" id="grupo-usuario">
+					<div class="grupo-formulario">
 						<label for="usuario">Usuário:</label>
-						<input type="text" id="usuario" name="usuario" required>
+						<input type="text" id="usuario" required>
 					</div>
-					<div class="grupo-formulario" id="grupo-senha">
+	
+					<div class="grupo-formulario">
 						<label for="senha">Senha:</label>
-						<input type="password" id="senha" name="senha" required>
+						<input type="password" id="senha" required>
 					</div>
+	
 					<button type="button" id="botao-login">Entrar</button>
+					<p id="mensagem-nao-tenho-conta">Não tenho conta</p>
 				</form>
-				<p id="mensagem-nao-tenho-conta">Não tenho conta</p>
 			</div>
 	
-			<div id="caixa-criar-conta" class="caixa-formulario escondido">
+			<div class="caixa-formulario escondido" id="caixa-criar-conta">
 				<h2>Criar Conta</h2>
 				<form>
-					<div class="grupo-formulario" id="grupo-novo-usuario">
+					<div class="grupo-formulario">
 						<label for="novo-usuario">Novo Usuário:</label>
-						<input type="text" id="novo-usuario" name="novo-usuario" required>
+						<input type="text" id="novo-usuario" required>
 					</div>
-					<div class="grupo-formulario" id="grupo-nova-senha">
+	
+					<div class="grupo-formulario">
 						<label for="nova-senha">Nova Senha:</label>
-						<input type="password" id="nova-senha" name="nova-senha" required>
+						<input type="password" id="nova-senha" required>
 					</div>
+	
 					<button type="button" id="botao-criar-conta">Criar Conta</button>
+					<p id="mensagem-ja-tenho-conta">Já tenho conta</p>
 				</form>
 			</div>
-	
-			<button type="button" id="botao-login-gmail">Logar com Gmail</button>
 		</div>
-	
-	
+
 		<!-- end: fh5co-parallax -->
 		<!-- end:fh5co-hero -->
 		<div id="fh5co-contact">
