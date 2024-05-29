@@ -18,8 +18,8 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   line-height: 1.8;
   font-size: 16px;
-  background: #fff;
-  color: #848484;
+  background: #ffffff;
+  color: #ffffff;
   font-weight: 300;
   overflow-x: hidden;
 }
@@ -32,7 +32,9 @@ a {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+  
 }
+
 a:hover {
   text-decoration: none !important;
   color: #4CB648 !important;
@@ -220,6 +222,21 @@ figure {
   border-bottom: none !important;
   font-weight: 300;
 }
+.sf-menu a::after{
+  content: '';
+  width:0px;
+  height: 4px;
+  background-color: #ffffff;
+  position:absolute;
+  bottom:0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.sf-menu :hover::after{
+  width: 100%;
+}
+
 .sf-menu a:hover, .sf-menu a:focus {
   color: #fff !important;
 }
