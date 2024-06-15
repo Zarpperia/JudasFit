@@ -1,5 +1,5 @@
 ## Documentação Judas Fit Academia: Tudo o que Você Precisa Saber
-<img src="documentation/images/Empresa – JUDAS FIT_00001.svg">
+<img src="images/Empresa – JUDAS FIT_00001.svg">
 <img src="documentation/images/Empresa – JUDAS FIT_00002.svg">
 <img src="documentation/images/Empresa – JUDAS FIT_00003.svg">
 <img src="documentation/images/Empresa – JUDAS FIT_00004.svg">
