@@ -1,30 +1,24 @@
-document.getElementById('botao-login').addEventListener('click', function() {
-    const username = document.getElementById('usuario').value;
-    const password = document.getElementById('senha').value;
-
-    // Verifica se o usuário e a senha estão presentes
-    if (!username || !password) {
-        alert('Usuário e senha são obrigatórios.');
-        return;
-    }
-
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
     alert('Login realizado com sucesso!');
 });
 
-document.getElementById('botao-criar-conta').addEventListener('click', function() {
-    alert('Criando nova conta...');
+// Adiciona animação de partículas nas bordas
+const inputs = document.querySelectorAll('input');
+inputs.forEach(input => {
+    input.addEventListener('focus', () => {
+        input.classList.add('particles');
+    });
+    input.addEventListener('blur', () => {
+        input.classList.remove('particles');
+    });
+});
+document.getElementById('btn-login').addEventListener('click', function() {
+    document.getElementById('login-form').style.display = 'block';
+    document.getElementById('criar-form').style.display = 'none';
 });
 
-document.getElementById('botao-login-gmail').addEventListener('click', function() {
-    alert('Logando com Gmail...');
-});
-
-document.getElementById('mensagem-nao-tenho-conta').addEventListener('click', function() {
-    document.getElementById('caixa-login').classList.add('escondido');
-    document.getElementById('caixa-criar-conta').classList.remove('escondido');
-});
-
-document.getElementById('mensagem-ja-tenho-conta').addEventListener('click', function() {
-    document.getElementById('caixa-criar-conta').classList.add('escondido');
-    document.getElementById('caixa-login').classList.remove('escondido');
+document.getElementById('btn-criar').addEventListener('click', function() {
+    document.getElementById('login-form').style.display = 'none';
+    document.getElementById('criar-form').style.display = 'block';
 });

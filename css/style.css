@@ -1518,66 +1518,154 @@ section {
   }
 }
 
-#container-autenticacao {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+/*login page*/
+
+.login-page {
+  background-color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.caixa-formulario {
-  background-color: #fff;
-  padding: 20px;
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-box {
+  background: rgba(12, 5, 1, 0.966);
+  padding: 2em;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+  position: relative;
+  width: 100svh;
+  max-width: 400dvh;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.particle-text {
+  text-shadow: 0px 2px 9px #130DFF, 0px 2px 9px #130DFF;
+  color: #FEFFFF;
+  font-size: 5em;
+  color: #ffffff;
+  position: relative;
+  animation: particle-text-glow 1.5s infinite;
+  font-style: initial;
+}
+
+@keyframes particle-text-glow {
+  0% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff;
+  }
+  50% {
+      text-shadow: 0 0 10px #fff, 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff, 0 0 50px #00ffff, 0 0 60px #00ffff;
+  }
+  100% {
+      text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #ff00ff, 0 0 30px #ff00ff;
+  }
+}
+
+.login-box input {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.login-box input:focus {
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px 2px #ff00ff, 0 0 20px 4px #00ffff;
+}
+
+.login-box input.particles {
+  animation: particle-border 1.5s infinite;
+}
+
+@keyframes particle-border {
+  0%, 100% {
+      box-shadow: 0 0 10px 2px #ff00ff, 0 0 20px 4px #00ffff;
+  }
+  50% {
+      box-shadow: 0 0 20px 4px #ff00ff, 0 0 30px 6px #00ffff;
+  }
+}
+
+.login-box button {
+  padding: 1em;
+  border: none;
+  border-radius: 5px;
+  background: #ff5722;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.login-box button:hover {
+  background: #e64a19;
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 2px #ff00ff, 0 0 20px 4px #00ffff;
+}
+
+.login-box a {
+  display: block;
+  margin-top: 1em;
+  color: #ff5722;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+/* Esconder o formulário de criar conta inicialmente */
+#criar-form {
+  display: none;
+}
+
+/* Estilo para os botões de escolha */
+.login-choice {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.grupo-formulario {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.grupo-formulario label {
-  display: block;
-  text-align: left;
-  margin-bottom: 5px;
-  color: #555;
-}
-
-.grupo-formulario input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-#botao-login,
-#botao-criar-conta,
-#botao-login-gmail {
-  width: 100%;
-  padding: 12px;
-  background-color: #4caf50;
-  color: #fff;
+.login-choice button {
+  padding: 10px 20px;
+  margin: 0 10px;
   border: none;
-  border-radius: 5px;
+  background-color: #333;
+  color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s;
-  margin-top: 10px;
 }
 
-#botao-login:hover,
-#botao-criar-conta:hover,
-#botao-login-gmail:hover {
-  background-color: #45a049;
-}
-
-.escondido {
-  display: none;
+.login-choice button:hover {
+  background-color: #555;
 }
